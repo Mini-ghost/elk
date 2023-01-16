@@ -11,6 +11,11 @@ interface LocaleObjectData extends LocaleObject {
 
 const locales: LocaleObjectData[] = [
   {
+    code: 'DEFAULT',
+    file: 'DEFAULT.json',
+    name: 'DEFAULT',
+  },
+  {
     code: 'en-US',
     file: 'en-US.json',
     name: 'English (US)',
@@ -166,9 +171,9 @@ export const i18n: NuxtI18nOptions = {
   strategy: 'no_prefix',
   detectBrowserLanguage: false,
   langDir: 'locales',
-  defaultLocale: 'en-US',
+  defaultLocale: 'DEFAULT',
   vueI18n: {
-    fallbackLocale: 'en-US',
+    fallbackLocale: 'DEFAULT',
     fallbackWarn: false,
     missingWarn: false,
     datetimeFormats,

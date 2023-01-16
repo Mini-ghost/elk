@@ -17,7 +17,7 @@
     "lint": "eslint --cache .",
     "typecheck": "stale-dep && nuxi typecheck",
     "prepare": "esno scripts/prepare.ts",
-    "generate": "nuxi generate",
+    "generate": "esno scripts/generate.ts ",
     "test:unit": "stale-dep && vitest",
     "test:typecheck": "stale-dep && vue-tsc --noEmit && vue-tsc --noEmit --project service-worker/tsconfig.json",
     "test": "stale-dep && nr test:unit",

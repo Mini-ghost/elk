@@ -4,7 +4,8 @@ import type { LocaleObject } from '#i18n'
 
 const userSettings = useUserSettings()
 
-const { locales } = useI18n() as { locales: ComputedRef<LocaleObject[]> }
+const { locales: _locales } = useI18n() as { locales: ComputedRef<LocaleObject[]> }
+const locales = computed(() => _locales.value.filter(locale => locale.code !== 'DEFAULT'))
 </script>
 
 <template>
